@@ -96,3 +96,14 @@ hs_err_pid*
 !/.idea/workspace.xml
 !/.idea/
 !/forever.iml
+.idea/$PRODUCT_WORKSPACE_FILE$
+.idea/.gitignore
+.idea/.name
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+forever.iml
+target/generated-sources/
+target/generated-test-sources/
