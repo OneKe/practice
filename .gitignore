@@ -107,3 +107,6 @@ hs_err_pid*
 forever.iml
 target/generated-sources/
 target/generated-test-sources/
+/.idea/jarRepositories.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/workspace.xml
