@@ -25,7 +25,6 @@ public class JsonUtils {
         mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
 
-
     public static String serialize(Object obj) {
         if (obj == null) {
             return null;
@@ -41,7 +40,6 @@ public class JsonUtils {
         }
     }
 
-
     public static <T> T parse(String json, Class<T> tClass) {
         try {
             return mapper.readValue(json, tClass);
@@ -50,7 +48,6 @@ public class JsonUtils {
             return null;
         }
     }
-
 
     public static <E> List<E> parseList(String json, Class<E> eClass) {
         try {
@@ -61,7 +58,6 @@ public class JsonUtils {
         }
     }
 
-
     public static <K, V> Map<K, V> parseMap(String json, Class<K> kClass, Class<V> vClass) {
         try {
             return mapper.readValue(json, mapper.getTypeFactory().constructMapType(Map.class, kClass, vClass));
@@ -71,7 +67,9 @@ public class JsonUtils {
         }
     }
 
-
+    /**
+     * 带泛型
+     */
     public static <T> T nativeRead(String json, TypeReference<T> type) {
         try {
             return mapper.readValue(json, type);
@@ -84,6 +82,18 @@ public class JsonUtils {
     public static <T> T objectConvert(Object obj, Class<T> clazz) {
         try {
             return mapper.convertValue(obj, clazz);
+        } catch (Exception e) {
+            log.error("json解析出错：" + obj, e);
+            return null;
+        }
+    }
+
+    /**
+     * 带泛型
+     */
+    public static <T> T objectNativeConvert(Object obj, TypeReference<T> type) {
+        try {
+            return mapper.convertValue(obj, type);
         } catch (Exception e) {
             log.error("json解析出错：" + obj, e);
             return null;
