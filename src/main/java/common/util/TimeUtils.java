@@ -3,7 +3,6 @@ package common.util;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
 import java.util.Date;
 
 public class TimeUtils {
@@ -14,7 +13,7 @@ public class TimeUtils {
     }
 
     public static Date dateTimeConvert(LocalDateTime dateTime) {
-        Instant instant = dateTime.toInstant(ZoneOffset.of("+8"));
+        Instant instant = dateTime.atZone(ZoneId.systemDefault()).toInstant();
         return Date.from(instant);
     }
 
