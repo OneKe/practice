@@ -19,13 +19,12 @@ public class Part0876 {
         }
         return list.get(list.size() / 2);
     }
-}
+    static class ListNode {
+        int val;
+        ListNode next;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
+        ListNode(int x) {
+            val = x;
+        }
     }
 }
