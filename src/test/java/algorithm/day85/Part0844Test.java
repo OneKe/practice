@@ -1,5 +1,6 @@
 package algorithm.day85;
 
+import algorithm.leetcode.Part0844;
 import org.junit.Test;
 
 public class Part0844Test {

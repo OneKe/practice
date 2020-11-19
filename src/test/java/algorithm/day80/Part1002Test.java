@@ -1,5 +1,6 @@
 package algorithm.day80;
 
+import algorithm.leetcode.Part1002;
 import org.junit.Test;
 
 import java.util.List;

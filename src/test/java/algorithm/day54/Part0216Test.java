@@ -1,10 +1,9 @@
 package algorithm.day54;
 
+import algorithm.leetcode.Part0216;
 import org.junit.Test;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class Part0216Test {
     @Test
