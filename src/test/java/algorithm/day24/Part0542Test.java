@@ -2,8 +2,6 @@ package algorithm.day24;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 public class Part0542Test {
 
     @Test

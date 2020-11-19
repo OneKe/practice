@@ -2,8 +2,6 @@ package algorithm.day3;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class Part0365Test {
 
     @Test
